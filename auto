@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+red() {
+  printf '\e[1;31m%s\n\e[0;39;49m' "$@"
+}
+
+green() {
+  printf '\e[1;32m%s\n\e[0;39;49m' "$@"
+}
+yellow() {
+  printf '\e[1;33m%s\n\e[0;39;49m' "$@"
+}
+green "killall screen"
+sleep 1 
+killall screen
+sleep 1
+ green "telebot"    
+screen -dmS Helper ./Ramin jokerhelper 
+screen -dmS Bot ./Ramin jokerapi   
+screen -dmS Cli ./Ramin jokercli    
+   
